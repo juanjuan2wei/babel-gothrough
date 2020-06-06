@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/jiaweiCao/babel-gothrough#readme",
   "dependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-plugin-import": "^1.13.0",
+    "babel-types": "^6.26.0"
   }
 }
