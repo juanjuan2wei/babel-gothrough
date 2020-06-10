@@ -1,0 +1,13 @@
+{
+  "presets": ["env"],
+  "plugins": [
+    [
+      "./build/index.js",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "lib",
+        "style": "css"
+      }
+    ]
+  ]
+}
