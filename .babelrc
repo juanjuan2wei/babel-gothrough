@@ -1,8 +1,16 @@
 {
   "presets": ["env"],
   "plugins": [
+//    [
+//      "./build/import-plugin/index.js",
+//      {
+//        "libraryName": "antd",
+//        "libraryDirectory": "lib",
+//        "style": "css"
+//      }
+//    ],
     [
-      "./build/index.js",
+      "./build/first-plugin/index.js",
       {
         "libraryName": "antd",
         "libraryDirectory": "lib",

@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "babel src/source.js -o dist/compiled.js",
-    "build": "babel plugins/my-plugin-import -d build",
-    "start": "babel src/source.js -o dist/my-plugin-import-compiled.js"
+    "build:first": "babel plugins/first-plugin -d build/first-plugin",
+    "build": "babel plugins/my-plugin-import -d build/import-plugin",
+    "start-import": "",
+    "start": "babel src/source.js -o dist/my-plugin-import-compiled.js",
+    "start:first": "babel src/source.js -o dist/first-compiled.js"
   },
   "repository": {
     "type": "git",
