@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build:first": "babel plugins/first-plugin -d build/first-plugin",
+    "start:first": "babel src/source.js -o dist/first-compiled.js",
     "build": "babel plugins/my-plugin-import -d build/import-plugin",
-    "start-import": "",
     "start": "babel src/source.js -o dist/my-plugin-import-compiled.js",
-    "start:first": "babel src/source.js -o dist/first-compiled.js"
+    "b-s-first": "npm run build:first && npm run start:first"
   },
   "repository": {
     "type": "git",

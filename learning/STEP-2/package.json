@@ -1,0 +1,22 @@
+{
+  "name": "babel-gothrough-step-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiaweiCao/babel-gothrough.git"
+  },
+  "keywords": [
+    "babel"
+  ],
+  "author": "cjw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jiaweiCao/babel-gothrough/issues"
+  },
+  "homepage": "https://github.com/jiaweiCao/babel-gothrough#readme"
+}

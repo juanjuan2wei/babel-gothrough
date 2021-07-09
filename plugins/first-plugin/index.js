@@ -3,17 +3,17 @@ module.exports = function ({ types: type }) {
   return {
     visitor: {
       ImportDeclaration(path, ref = { opts: {} }) {
+        // ref.opts 可以拿到.babelrc里面配置的字段
         const specifiers = path.node.specifiers;
         const source = path.node.source;
         const libraryName = source.value;
-        const component_reg = /^-\/components/;
-        const is_component = component_reg.test(libraryName);
-        if (
-          is_component &&
-          specifiers.find((specifier) => type.isImportSpecifier(specifier))
-        ) {
-          const declarationNodes = [];
+        const getFileName = ref.opts.libraryDirectory;
+        const libraryDirectory =
+          typeof getFileName === "undefined" ? "lib" : getFileName;
 
+        const declarationNodes = [];
+
+        if (libraryName === ref.opts.libraryName) {
           specifiers.forEach((specifier) => {
             if (!type.isImportDefaultSpecifier(specifier)) {
               // 是否使用别名
@@ -29,17 +29,24 @@ module.exports = function ({ types: type }) {
                         ),
                       ],
                   type.stringLiteral(
-                    ref.opts.business.some((x) => x === specifier.imported.name)
-                      ? `-/component/business/${specifier.imported.name}`
-                      : `-/component${ref.opts.modulePath.replace(
-                          "{moduleName}",
-                          specifier.imported.name
-                        )}`
+                    `${libraryName}/${libraryDirectory}/${specifier.imported.name}`
                   )
                 )
               );
+              // 添加样式
+              if (ref.opts.style) {
+                declarationNodes.push(
+                  type.importDeclaration(
+                    [],
+                    type.stringLiteral(
+                      `${libraryName}/${libraryDirectory}/style/${specifier.imported.name}.${ref.opts.style}`
+                    )
+                  )
+                );
+              }
             }
           });
+
           // 一个节点替换成多个
           path.replaceWithMultiple(declarationNodes);
         }

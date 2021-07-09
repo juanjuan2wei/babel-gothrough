@@ -1,17 +1,3 @@
-# babel-gothrough
-
-1.[babel 导读](https://github.com/jiaweiCao/babel-gothrough/issues/1)
-
-2.[用户操作](https://github.com/jiaweiCao/babel-gothrough/issues/2)
-
-3.[babel 的基础](https://github.com/jiaweiCao/babel-gothrough/issues/3)
-
-4.[实现一个自定义的插件](https://github.com/jiaweiCao/babel-gothrough/issues/4)
-
-5.[搭一个属于自己 babel 插件的调试架子](https://github.com/jiaweiCao/babel-gothrough/issues/5)
-
-# 手把手教你写一个自己的 bable 插件
-
 ## STEP - 1
 
 在写 babel 插件之前，首先得了解一下这个东西是干森么的。
@@ -123,12 +109,12 @@ function addAll() {
 
 其实`babel-polyfill`还有他的兄弟: `babel-runtime`, `babel-plugin-transform-runtime`,这两个主要是就是为了解决`Polyfill`按需加载的问题。这里仅做了解。
 
-## STEP - 2
+https://astexplorer.net/
 
-有了一定的前置知识，就先开干了，一边干，一边看 --- 不知名的 cjw
+https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/plugin-handbook.md#toc-asts
 
-babel 提供了一个 babel-cli，我们可以本地安装它，用它来学习基础支持。
+https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/user-handbook.md#toc-babel-polyfill
 
-```
-npm install --save-dev babel-cli
-```
+https://github.com/babel/website/blob/main/docs/types.md
+
+https://github.com/babel/babel/blob/master/packages/babel-parser/ast/spec.md#node-objects

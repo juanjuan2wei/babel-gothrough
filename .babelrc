@@ -1,14 +1,14 @@
 {
   "presets": ["env"],
   "plugins": [
-//    [
-//      "./build/import-plugin/index.js",
-//      {
-//        "libraryName": "antd",
-//        "libraryDirectory": "lib",
-//        "style": "css"
-//      }
-//    ],
+    //    [
+    //      "./build/import-plugin/index.js",
+    //      {
+    //        "libraryName": "antd",
+    //        "libraryDirectory": "lib",
+    //        "style": "css"
+    //      }
+    //    ],
     [
       "./build/first-plugin/index.js",
       {
